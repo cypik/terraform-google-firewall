@@ -21,11 +21,9 @@ To get started, make sure you have configured your GCP provider. You can use the
 ```hcl
 
 module "firewall" {
-  source        = "git::https://github.com/opz0/terraform-gcp-firewall.git"
+  source        = "git::https://github.com/opz0/terraform-gcp-firewall.git?ref=v1.0.0"
   name          = "app"
   environment   = "test"
-  label_order   = ["name", "environment"]
-  project_id    = "opz0-397319"
   network       = module.vpc.vpc_id
   priority      = 1000
   source_ranges = ["0.0.0.0/0"]
@@ -49,7 +47,7 @@ Make sure to configure the provider block with your GCP credentials or use other
 - priority (number): The priority of the firewall rule.
 - source_ranges (list of strings): The source IP ranges for the firewall rule.
 - allow (list of objects): The rules defining the allowed protocols and ports.
-  
+
 ## Examples
 For detailed examples on how to use these modules, please refer to the 'examples' directory within this repository.
 ## Author
