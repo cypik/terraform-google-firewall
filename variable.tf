@@ -34,12 +34,6 @@ variable "network" {
   description = "(Required) The VPC network the subnets belong to. Only networks that are in the distributed mode can have subnetworks."
 }
 
-variable "project_id" {
-  type        = string
-  default     = ""
-  description = "(Optional) The ID of the project in which the resource belongs. If it is not set, the provider project is used."
-}
-
 variable "enabled" {
   type        = bool
   default     = true

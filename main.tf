@@ -1,6 +1,5 @@
 module "labels" {
-  source = "git::git@github.com:opz0/terraform-gcp-labels.git?ref=master"
-
+  source      = "git::https://github.com/opz0/terraform-azure-labels.git?ref=v1.0.0"
   name        = var.name
   environment = var.environment
   label_order = var.label_order
@@ -8,10 +7,12 @@ module "labels" {
   repository  = var.repository
 }
 
+data "google_client_config" "current" {
+}
+
 #####==============================================================================
 ##### Each network has its own firewall controlling access to and from the instances.
 #####==============================================================================
-
 resource "google_compute_firewall" "default" {
   count     = var.enabled && var.firewall_enabled ? 1 : 0
   name      = format("%s-firewall", module.labels.id)
@@ -19,7 +20,7 @@ resource "google_compute_firewall" "default" {
   direction = var.direction
   disabled  = var.disabled
   priority  = var.priority
-
+  project   = data.google_client_config.current.project
   dynamic "allow" {
     for_each = var.allow
 
@@ -36,6 +37,5 @@ resource "google_compute_firewall" "default" {
       ports    = deny.value.ports
     }
   }
-
   source_ranges = var.source_ranges
 }
