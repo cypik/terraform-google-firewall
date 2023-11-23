@@ -12,14 +12,14 @@ variable "label_order" {
 
 variable "repository" {
   type        = string
-  default     = ""
+  default     = "https://github.com/cypik/terraform-gcp-firewall"
   description = "Terraform current module repo"
 }
 
 variable "managedby" {
   type        = string
   default     = ""
-  description = "ManagedBy, eg 'Opz0'."
+  description = "ManagedBy, eg 'cypik'."
 }
 
 variable "name" {
@@ -80,5 +80,3 @@ variable "source_ranges" {
   default     = []
   description = "(Optional) If source ranges are specified, the firewall will apply only to traffic that has source IP address in these ranges."
 }
-
-
