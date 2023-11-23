@@ -17,11 +17,11 @@ This Terraform configuration sets up GCP infrastructure, including a Virtual Pri
 ## Usage
 
 To get started, make sure you have configured your GCP provider. You can use the following code as a starting point:
-
+## Example: firewall
 ```hcl
 
 module "firewall" {
-  source        = "git::https://github.com/opz0/terraform-gcp-firewall.git?ref=v1.0.0"
+  source        = "git::https://github.com/cypik/terraform-gcp-firewall.git?ref=v1.0.0"
   name          = "app"
   environment   = "test"
   network       = module.vpc.vpc_id
@@ -49,9 +49,9 @@ Make sure to configure the provider block with your GCP credentials or use other
 - allow (list of objects): The rules defining the allowed protocols and ports.
 
 ## Examples
-For detailed examples on how to use these modules, please refer to the 'examples' directory within this repository.
+For detailed examples on how to use these modules, please refer to the '[examples](https://github.com/cypik/terraform-gcp-firewall/blob/master/example)' directory within this repository.
 ## Author
 Your Name Replace '[License Name]' and '[Your Name]' with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/opz0/terraform-gcp-firewall/blob/master/LICENCE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/cypik/terraform-gcp-firewall/blob/master/LICENCE) file for details.
