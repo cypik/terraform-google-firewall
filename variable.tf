@@ -69,6 +69,7 @@ variable "allow" {
   default     = []
   description = "(Optional) The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a permitted connection."
 }
+
 variable "deny" {
   type        = list(any)
   default     = []

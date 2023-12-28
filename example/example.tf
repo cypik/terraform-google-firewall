@@ -1,5 +1,5 @@
 provider "google" {
-  project = "opz0-397319"
+  project = "local-concord-408802"
   region  = "asia-northeast1"
   zone    = "asia-northeast1-a"
 }
@@ -9,7 +9,7 @@ provider "google" {
 #####==============================================================================
 module "vpc" {
   source                                    = "git::https://github.com/cypik/terraform-gcp-vpc.git?ref=v1.0.0"
-  name                                      = "app"
+  name                                      = "app1"
   environment                               = "test"
   routing_mode                              = "REGIONAL"
   network_firewall_policy_enforcement_order = "AFTER_CLASSIC_FIREWALL"
@@ -20,7 +20,7 @@ module "vpc" {
 #####==============================================================================
 module "firewall" {
   source        = "./../."
-  name          = "app"
+  name          = "app1"
   environment   = "test"
   network       = module.vpc.vpc_id
   priority      = 1000

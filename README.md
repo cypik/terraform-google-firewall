@@ -12,12 +12,12 @@
 
 ## Introduction
 
-This Terraform configuration sets up GCP infrastructure, including a Virtual Private Cloud (VPC) and firewall rules with specified configurations.
+This project deploys a Google Cloud infrastructure using Terraform to create **FIREWALL** .
 
 ## Usage
 
 To get started, make sure you have configured your GCP provider. You can use the following code as a starting point:
-## Example: firewall
+## Example: _firewall_
 ```hcl
 
 module "firewall" {
@@ -39,19 +39,19 @@ module "firewall" {
 Make sure to configure the provider block with your GCP credentials or use other authentication methods. Adjust the variables according to your requirements.
 
 ## Module Inputs
-- name (string): The name of the infrastructure components.
-- environment (string): The environment in which the infrastructure is being created.
-- project_id (string): The GCP project ID.
-- routing_mode (string): The routing mode for the VPC (e.g., "REGIONAL").
-- network_firewall_policy_enforcement_order (string): The enforcement order for network firewall policies.
-- priority (number): The priority of the firewall rule.
-- source_ranges (list of strings): The source IP ranges for the firewall rule.
-- allow (list of objects): The rules defining the allowed protocols and ports.
+- `name` : The name of the infrastructure components.
+- `environment` : The environment in which the infrastructure is being created.
+- `project_id` : The GCP project ID.
+- `routing_mode` : The routing mode for the VPC (e.g., "REGIONAL").
+- `network_firewall_policy_enforcement_order` : The enforcement order for network firewall policies.
+- `priority` : The priority of the firewall rule.
+- `source_ranges` : The source IP ranges for the firewall rule.
+- `allow` : The rules defining the allowed protocols and ports.
 
 ## Examples
-For detailed examples on how to use these modules, please refer to the '[examples](https://github.com/cypik/terraform-gcp-firewall/blob/master/example)' directory within this repository.
+For detailed examples on how to use these modules, please refer to the [EXAMPLE](https://github.com/cypik/terraform-gcp-firewall/tree/master/example) directory within this repository.
 ## Author
-Your Name Replace '[License Name]' and '[Your Name]' with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
+Your Name Replace **'[License Name]'** and **'[Your Name]'** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/cypik/terraform-gcp-firewall/blob/master/LICENCE) file for details.
