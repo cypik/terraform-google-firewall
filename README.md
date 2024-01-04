@@ -1,4 +1,4 @@
-# terraform-gcp-firewall
+# Terraform-gcp-firewall
 # GCP Infrastructure Terraform Configuration
 
 ## Table of Contents
@@ -12,7 +12,7 @@
 
 ## Introduction
 
-This project deploys a Google Cloud infrastructure using Terraform to create **FIREWALL** .
+This project deploys a Google Cloud infrastructure using Terraform to create firewall .
 
 ## Usage
 
@@ -49,7 +49,7 @@ Make sure to configure the provider block with your GCP credentials or use other
 - `allow` : The rules defining the allowed protocols and ports.
 
 ## Examples
-For detailed examples on how to use these modules, please refer to the [EXAMPLE](https://github.com/cypik/terraform-gcp-firewall/tree/master/example) directory within this repository.
+For detailed examples on how to use these modules, please refer to the [Examples](https://github.com/cypik/terraform-gcp-firewall/tree/master/example) directory within this repository.
 ## Author
 Your Name Replace **'[License Name]'** and **'[Your Name]'** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
