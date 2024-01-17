@@ -1,3 +1,9 @@
+variable "name" {
+  type        = string
+  default     = ""
+  description = "Name of the resource. Provided by the client when the resource is created. "
+}
+
 variable "environment" {
   type        = string
   default     = ""
@@ -12,20 +18,14 @@ variable "label_order" {
 
 variable "repository" {
   type        = string
-  default     = "https://github.com/cypik/terraform-gcp-firewall"
+  default     = "https://github.com/cypik/terraform-google-firewall"
   description = "Terraform current module repo"
 }
 
 variable "managedby" {
   type        = string
-  default     = ""
+  default     = "cypik"
   description = "ManagedBy, eg 'cypik'."
-}
-
-variable "name" {
-  type        = string
-  default     = ""
-  description = "Name of the resource. Provided by the client when the resource is created. "
 }
 
 variable "network" {
