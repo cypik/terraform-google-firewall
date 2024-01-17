@@ -26,7 +26,7 @@ module "firewall" {
   network       = module.vpc.vpc_id
   priority      = 1000
   source_ranges = ["0.0.0.0/0"]
-  allow         = [
+  allow = [
     {
       protocol = "tcp"
       ports    = ["22", "80"]
