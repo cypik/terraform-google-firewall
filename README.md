@@ -22,7 +22,7 @@ To get started, make sure you have configured your GCP provider. You can use the
 ```hcl
 
 module "firewall" {
-  source        = "cypik/vpc/google"
+  source        = "cypik/firewall/google"
   version       = "1.0.1"
   name          = "app"
   environment   = "test"
